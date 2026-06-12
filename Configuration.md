@@ -15,6 +15,7 @@ pip install langchain-openai langchain-core openai pillow requests
 ```
 
 写入.env文件：
+
 ```env
 SCENEGEN_MODEL=gemini-3.1-pro-preview-thinking
 SCENEGEN_BASE_URL=https://your-openai-compatible-endpoint/v1
@@ -28,4 +29,14 @@ SCENEGEN_TEXTURE_MODEL=gemini-3-pro-image-preview
 SCENEGEN_TEXTURE_BASE_URL=https://your-image-generation-endpoint
 SCENEGEN_TEXTURE_API_KEY=your-texture-api-key
 ```
+
 从上到下依次为LLM模型、VLM模型、能进行图片生成的VLM模型。
+
+## 运行
+
+参照config_example.json和.env.example进行配置。
+输入以下命令：
+```bash
+python run_pipeline.py --config my_config.json
+```
+最后将输出的stage12_render/render_output.py在blender中运行，即可得到模型生成结果。
