@@ -1,6 +1,6 @@
 # Environment / secrets
 .env
-my_config.json
+
 # Python
 __pycache__/
 *.py[cod]
